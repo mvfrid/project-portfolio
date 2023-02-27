@@ -1,0 +1,9 @@
+body {
+    display: flex;
+}
+
+div {
+    background-color: rgb(169, 169, 247);
+    padding: 20px 50px;
+    margin: 70px auto;
+}
