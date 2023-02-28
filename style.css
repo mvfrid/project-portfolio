@@ -81,7 +81,7 @@ h4 {
     height: 100%;
     background-image: url('https://images.unsplash.com/photo-1593645217462-9c70b658579b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzc1NjgwNDk&ixlib=rb-4.0.3&q=80');
     background-size: cover;
-    background-position: center;
+    background-position: 75%;
 }
 
 /* TECH SECTION */
@@ -132,6 +132,7 @@ h4 {
     background-color: bisque;
     display: flex;
     flex-direction: row;
+    margin: 25px 0 0 0;
 
 }
 
@@ -141,4 +142,5 @@ h4 {
 
 .project-container-text {
     background-color: ghostwhite;
+    padding-left: 10px;
 }
