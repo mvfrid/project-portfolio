@@ -87,6 +87,26 @@ p {
     display: flex;
     margin: 30px;
 }
+
+
+.links button {
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 5px;
+}
+
+
+.svg-icon {
+    fill: rgb(0, 0, 0);
+    width: 32px;
+    height: 32px;
+}
+
+.svg-icon:hover {
+    fill: rgb(131, 131, 131);
+}
+
+
 .introduction-side-image {
     /*display: none;    - On mobile view */  
     grid-column-start: 2 / 3;
@@ -173,7 +193,7 @@ p {
 }
 
 .project-container-text {
-    background-color: ghostwhite;
+    background-color: rgb(208, 222, 248);
     padding-left: 10px;
 }
 
@@ -188,7 +208,50 @@ p {
     padding: 2px 5px;
 }
 
-/**/
+.project-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-links button  {
+    background-color: #F5F5F5;
+    border-radius: 40px;
+    margin: 5px;
+    padding: 7px 10px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-button:hover  {
+    background-color: #ff9595;
+    color: white;
+}
+
+.git-code-button:hover  {
+    background-color: #ba95ff;
+    color: white;
+}
+
+.project-links button .icons {
+    fill: rgb(0, 0, 0);
+    width: 32px;
+    height: 32px;
+}
+
+.project-links button .icons:hover {
+    fill: rgb(255, 255, 255);
+}
+
+.project-links button p {
+    margin-left: 10px;
+}
+
+
+
+/* MY WORDS */
 
 .my-words {
     width: 100%;
@@ -221,6 +284,38 @@ p {
     padding: 25px;
     margin: 10px auto;
 }
+
+.button-read-article {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+.button-read-article .icon {
+    fill: black;
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+}
+
+.button-read-article p {
+    font-size: 18px;
+}
+
+.button-read-article:hover {
+    background-color: #FFD338;
+    color: white;
+}
+
+.button-read-article .icon:hover {
+    fill: white;
+}
+
 
 /* SKILLS */
 
