@@ -1,9 +1,144 @@
-body {
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+/* Color selection */
+:root {
+    --primary-color: rgb(181, 179, 202);
+    --secondary-color: rgb(253, 244, 209);
+    --tertiary-color: rgb(171, 196, 243);
+    --standard-white-color: rgb(255, 255, 255);
 }
 
-div {
-    background-color: rgb(169, 169, 247);
-    padding: 20px 50px;
-    margin: 70px auto;
+
+body {
+    font-family: 'EB Garamond', serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* All general heading properties below:*/
+h1 {
+    font-family: 'Satoshi';
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Satoshi';
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Satoshi';
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Satoshi';
+    margin: 0;
+}
+
+/* INTRODUCTION SECTION */
+
+.introduction {
+    grid-column-start: 1 / 2; 
+    background-color: var(--primary-color);
+}
+
+.container {
+    background-color: azure;
+    margin: 15% 20%;
+}
+
+.container img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-text {
+    background-color: rgb(245, 180, 180);
+    display: flex;
+    flex-direction: column;
+    margin: auto 0 auto 10px;
+}
+
+.container p {
+    margin: 30px;
+}
+
+.links {
+    background-color: rgb(236, 167, 245);
+    display: flex;
+    margin: 30px;
+}
+.introduction-side-image {
+    /*display: none;    - On mobile view */  
+    grid-column-start: 2 / 3;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1593645217462-9c70b658579b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzc1NjgwNDk&ixlib=rb-4.0.3&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* TECH SECTION */
+
+.tech {
+    background-color: var(--secondary-color);
+    grid-column: 1 / 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech h1 {
+    background-color: darkolivegreen;
+}
+
+.tech p {
+    max-width: 500px;
+    margin: 10px;
+    background-color: bisque;
+}
+
+
+/* FEATURED PROJECTS */
+
+:root {
+    --featured-proj-width: 500px;
+}
+
+.featured-projects {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20% 50px 20%;
+}
+
+.featured-projects h1 {
+    background-color: rgb(130, 130, 187);
+    max-width: var(--featured-proj-width);
+    margin: 0 0 0 0;
+    font-size: 50px;
+}
+
+.project-container {
+    max-width: var(--featured-proj-width);
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.project-container img {
+    max-width: 200px;
+}
+
+.project-container-text {
+    background-color: ghostwhite;
 }
