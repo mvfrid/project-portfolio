@@ -584,9 +584,13 @@ dd {
             right: 50%;
         }
 
+        .tech {
+            flex-direction: column;
+        }
+
         .tech p {
             max-width: 300px;
-            margin: 0 0 0 20px;
+            margin: 20px 0 0 0;
         }
 
         .skill-lists-container {
