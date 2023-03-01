@@ -455,6 +455,7 @@ p {
 }
 
 dt {
+    display: inline-block;
     font-size: 24px;
     margin: 0 0 15px 0;
     color: white;
