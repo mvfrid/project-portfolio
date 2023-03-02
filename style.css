@@ -80,6 +80,12 @@ p {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 /* INTRODUCTION SECTION */
@@ -647,6 +653,10 @@ dd {
             grid-column: 1 / 3;
         }
 
+        .presentation img {
+            margin-bottom: 20px;
+        }
+        
         
         .container .presentation {
             flex-direction: column;
@@ -760,7 +770,10 @@ dd {
             flex-direction: column;
         }
 
-
+        .contact img {
+            margin-bottom: 20px;
+        }
+        
 
 
         
