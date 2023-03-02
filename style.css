@@ -31,6 +31,8 @@
     --hover-blue: #0B24F5;
     --hover-yellow: #FFD338;
     --hover-grey: #D0D0D0;
+
+    --scroller-circle-color:  rgb(231, 236, 252, 1);
 }
 
 
@@ -173,7 +175,7 @@ p {
 
 
 .scroller {
-    background-color: rgba(231, 236, 255, 1);
+    background-color: var(--scroller-circle-color);
     position: absolute;
     left: calc(50% - 75px);
     top: 80%;
@@ -602,13 +604,13 @@ dd {
 
     .container {
         border: 1px solid blue;
-        margin: 40px 25px;
+        margin: 30px 25px;
     }
 
 
     .introduction-side-image {
         /*display: none;    - On mobile view */  
-        height: 412px;
+        height: 350px;
         grid-column: span 2;
         grid-row: 1;
     }
@@ -619,7 +621,7 @@ dd {
     }
 
     .scroller {
-        top: 85%;
+        top: 84%;
         left: calc(50% - 75px);
     }
 }
