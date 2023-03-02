@@ -547,6 +547,7 @@ dd {
     line-height: 162px;
     color: var(--heading-pink);
     margin-bottom: 30px;
+    margin-top: 40px;
 }
 
 .contact img {
