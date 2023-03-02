@@ -23,12 +23,29 @@
     --heading-blue: #0B24F5;
     --heading-pink: #EB5577;
 
+    --button-light-grey: #F5F5F5;
+    --tag-blue: #2483E0;
+    --tag-green: #6DB486;
+
     --hover-pink: #EB5577;
     --hover-blue: #0B24F5;
     --hover-yellow: #FFD338;
     --hover-grey: #D0D0D0;
 }
 
+/*.code dt {
+    background-color: #EB5577;
+}
+
+.toolbox dt {
+    background-color: #2483E0;
+}
+
+.more dt {
+    background-color: #0B24F4;
+}
+
+}*/
 
 body {
     font-family: 'EB Garamond', serif;
@@ -73,6 +90,7 @@ p {
 .introduction {
     height: 980px;
     width: 100%;
+    position: relative;
 }
 
 .container {
@@ -82,8 +100,8 @@ p {
 
 .container img {
     border-radius: 50%;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 164px;
+    max-height: 164px;
 }
 
 .presentation {
@@ -164,12 +182,51 @@ p {
 
 
 .scroller {
-    background-color: transparent;
+    background-color: rgba(231, 236, 255, 1);
     position: absolute;
-    right: 52%;
-    top: 82%;
-    width: 60px;
+    left: calc(50% - 75px);
+    top: 80%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.scroller img {
+    background-color: transparent;
+    height: 50px;
+}
+
+.scroller p {
+    color: var(--heading-blue);
+}
+
+
+/*
+.scroller {
+    background-color: rgb(236, 33, 33);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroller p {
+    text-align: center;
+    color: var(--heading-blue);
+}
+
+.scroller img {
+    height: 60px;
+}
+*/
 
 
 
@@ -206,15 +263,15 @@ p {
 
 
 .js {
-    background-color: #0B24F4;
+    background-color: var(--heading-pink);
 }
 
 .react {
-    background-color: #e65f76;
+    background-color: var(--heading-blue);
 }
 
 .mob {
-    background-color: #12af2c;
+    background-color: var(--tag-blue);
 }
 
 
@@ -293,10 +350,14 @@ p {
 
 .project-links button  {
     background-color: #F5F5F5;
+    font-family: SatoshiRegular;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
     border-radius: 40px;
     max-height: 45px;
     margin: 10px 5px 5px 5px;
-    padding: 7px 10px;
+    padding: 7px 15px 7px 10px;
     border: none;
     display: flex;
     flex-direction: row;
@@ -318,16 +379,13 @@ p {
     fill: rgb(0, 0, 0);
     width: 32px;
     height: 32px;
+    margin-right: 8px;
 }
 
 .project-links button .icons:hover {
     fill: rgb(255, 255, 255);
 }
 
-.project-links button p {
-    margin-left: 10px;
-    margin-top: 20px;
-}
 
 /* MY WORDS */
 
@@ -457,6 +515,7 @@ dt {
     font-size: 24px;
     margin: 0 0 15px 0;
     color: white;
+    padding: 2px 6px;
 }
 
 dd {
@@ -465,19 +524,19 @@ dd {
 }
 
 .code dt {
-    background-color: #EB5577;
+    background-color: var(--heading-pink);
 }
 
 .toolbox dt {
-    background-color: #2483E0;
+    background-color: var(--tag-blue);
 }
 
 .more dt {
-    background-color: #0B24F4;
+    background-color: var(--heading-blue);
 }
 
 .upcoming dt {
-    background-color: #6DB486;
+    background-color: var(--tag-green);
 }
 
 
@@ -554,6 +613,10 @@ dd {
         max-width: 400px;
         margin: 0 0 0 60px;
     }
+
+    .scroller {
+        left: calc(75% - 75px);
+    }
 }
 
 
@@ -579,9 +642,9 @@ dd {
         }
 
         .scroller {
-            background-color: transparent;
-            top: 62%;
-            right: 50%;
+            top: calc(100% - 160px);
+            left: calc(50% - 75px);
+            margin: 50% 0;
         }
 
         .tech {
