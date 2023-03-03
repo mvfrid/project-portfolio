@@ -36,6 +36,9 @@
     --scroller-circle-color:  rgb(231, 236, 252, 1);
 }
 
+.sr-only {
+    display:none;
+}
 
 body {
     font-family: 'EB Garamond', serif;
@@ -444,26 +447,19 @@ a:visited {
     align-items: center;
     padding: 5px 15px;
     margin: 25px 0 0 0;
+    font-size: 18px;
 }
 
 .button-read-article .icon {
-    fill: black;
     height: 32px;
     width: 32px;
     margin-right: 10px;
 }
 
-.button-read-article p {
-    font-size: 18px;
-}
 
 .button-read-article:hover {
     background-color: #FFD338;
     color: white;
-}
-
-.button-read-article .icon:hover {
-    fill: white;
 }
 
 
