@@ -7,12 +7,12 @@
   @font-face {
     font-family: 'SatoshiRegular';
     font-weight: normal;
-    src: url('../assets/fonts/satoshi/Satoshi-Regular.otf');
+    src: url('./assets/fonts/satoshi/Satoshi-Regular.otf');
   }
 
   @font-face {
     font-family: 'SatoshiVariable';
-    src: url('../assets/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
+    src: url('./assets/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
   }
 
   /*
