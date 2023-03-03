@@ -584,6 +584,13 @@ dd {
     margin-bottom: 200px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+}
+
+
+.btn-top svg:hover {
+    color: blue;
+    cursor: pointer;
 }
 
 
@@ -637,6 +644,11 @@ dd {
         margin-bottom: 200px;
         border: none;
         background-color: transparent;
+    }
+
+    .btn-top:hover {
+        color: red;
+        fill: blue;
     }
 }
 
