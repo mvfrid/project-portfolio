@@ -569,9 +569,8 @@ dd {
 
 
 
-/*
 
-
+/* TABLET */
 
 @media (min-width: 667px) and (max-width: 1024px) {
 
@@ -695,7 +694,7 @@ dd {
 
 
 
-
+/* DESKTOP */
 
     @media (min-width: 1025px) {
 
@@ -880,5 +879,3 @@ dd {
 
 }
 
-
-*/
