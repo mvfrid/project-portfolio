@@ -1,10 +1,8 @@
 /* Fonts: */
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('../assets/fonts/satoshi/Satoshi-Regular.otf');
-@import url('../assets/fonts/satoshi/Satoshi-Variable.ttf');
 
-  @font-face {
+@font-face {
     font-family: 'SatoshiRegular';
     font-weight: normal;
     src: url('./assets/fonts/satoshi/Satoshi-Regular.otf');
@@ -15,26 +13,9 @@
     src: url('./assets/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
   }
 
-  /*
-  @font-face {
-    font-family: 'SatoshiRegular';
-    font-weight: normal;
-    src: url('../assets/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf');
-  }
 
-  @font-face {
-    font-family: 'SatoshiVariable';
-    src: url('../assets/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf') format('truetype');
-  }
-  */
+/* Colors and common dimensions */
 
-
-/* Desktop large: between 1281px and 1512px*/
-/* Desktop large: between 745px and 1280px*/
-/* Tablet: between 376px and 744px - bild 412px hög*/
-/* Mobile: between 0 and 375px*/
-
-/* Color selection */
 :root {
     --primary-color: rgb(207, 204, 236);
     --secondary-color: rgb(250, 226, 243);
@@ -45,36 +26,31 @@
     --heading-blue: #0B24F5;
     --heading-pink: #EB5577;
 
-    --button-light-grey: #F5F5F5;
-    --tag-blue: #2483E0;
-    --tag-green: #6DB486;
-
     --hover-pink: #EB5577;
     --hover-blue: #0B24F5;
     --hover-yellow: #FFD338;
     --hover-grey: #D0D0D0;
 
     --scroller-circle-color:  rgb(231, 236, 252, 1);
+    --button-light-grey: #F5F5F5;
+    --tag-blue: #2483E0;
+    --tag-green: #6DB486;
+
+    --side-margins-mobile: 30px;
+    --side-margins-tablet: 50px;
+    --side-margins-desktop: 65px;
 }
 
-.sr-only {
-    display:none;
-}
+
+/* General styling */
 
 body {
-    font-family: 'EB Garamond', serif;
-    /*height: 100vh;*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
-section {
-    display: inline-block;
-}
-
-/* All general heading properties below:*/
 h1 {
-    font-family: 'SatoshiRegular';
+    font-family:  'SatoshiVariable';
     font-size: 80px;
     font-weight: 700;
     line-height: 108px;
@@ -82,17 +58,17 @@ h1 {
 }
 
 h2 {
-    font-family: 'SatoshiRegular';
+    font-family:  'SatoshiVariable';
     margin: 0;
 }
 
 h3 {
-    font-family: 'SatoshiRegular';
+    font-family:  'SatoshiVariable';
     margin: 0;
 }
 
 h4 {
-    font-family: 'SatoshiRegular';
+    font-family:  'SatoshiVariable';
     margin: 0;
 }
 
@@ -113,16 +89,30 @@ a:visited {
     color: black;
 }
 
-/* INTRODUCTION SECTION */
+
+
+
+/* Vi döljer alla för nu: */
+
+.sr-only {
+    display: none;
+}
+
+
+
+
+
+/*--  PRESENTATION INTRODUCTION  --*/
+
 
 .introduction {
-    height: 980px;
+    min-height: 980px;
     width: 100%;
     position: relative;
 }
 
 .container {
-    margin: 200px 60px;
+    margin: 100px var(--side-margins-mobile);
 }
 
 .container img {
@@ -133,17 +123,18 @@ a:visited {
 
 .presentation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .presentation-text {
     display: flex;
     flex-direction: column;
-    margin: auto 0 auto 20px;
+    margin: auto 0 auto 0;
 }
 
 .presentation-text h2 {
-    font-family: 'SatoshiVariable';
     color: var(--heading-blue);
     font-size: 28px;
     font-weight: 700;
@@ -151,14 +142,12 @@ a:visited {
 }
 
 .presentation-text h3 {
-    font-family: 'SatoshiRegular';
     font-size: 32px;
     font-weight: 900;
     line-height: 43px;
 }
 
 .presentation-text h4 {
-    font-family: 'SatoshiRegular';
     color: #565656;
     font-size: 24px;
     font-weight: 400;
@@ -167,19 +156,19 @@ a:visited {
 
 
 .container p {
-    margin: 30px;
+    margin: 30px 0 30px 0;
 }
 
 .links {
     display: flex;
-    margin: 30px;
+    margin: 30px 0;
 }
 
 
 .link-icons {
     background-color: transparent;
     border: none;
-    margin: 0 20px 0 0;
+    margin-right: 30px;
 }
 
 
@@ -193,25 +182,27 @@ a:visited {
     fill: var(--hover-grey);
 }
 
+/* Side image, not visible in mobile view */
 
 .introduction-side-image {
-    /*display: none;    - On mobile view */  
-    width: 100%;
-    height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1593645217462-9c70b658579b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzc1NjgwNDk&ixlib=rb-4.0.3&q=80');
-    background-size: cover;
-    background-position: 75%;
+    display: none;
 }
 
 
+
+/* The scroller (fixed on screen for mobile) */
+
+
 .scroller {
+    grid-column: 1 / 2;
     background-color: var(--scroller-circle-color);
-    position: absolute;
-    left: calc(50% - 75px);
-    top: 80%;
-    width: 150px;
-    height: 150px;
+    position: fixed;
+    top: 78%;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    margin: 50px auto 50px auto;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -221,25 +212,28 @@ a:visited {
 
 .scroller img {
     background-color: transparent;
-    height: 50px;
+    height: 20px;
 }
 
 .scroller p {
     color: var(--heading-blue);
+    font-size: 18px;
 }
 
 
 
-/* TECH SECTION */
+
+/*--   TECH SECTION   --*/
 
 .tech {
     background-color: var(--primary-color);
-    grid-column: 1 / 3;
-    width: 100%;
-    height: 800px;
+    grid-column: 1 / 2;
+    min-height: 800px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .tech h1 {
@@ -251,8 +245,7 @@ a:visited {
 
 
 .tech p {
-    max-width: 45%;
-    margin: 0 0 0 100px;
+    margin: var(--side-margins-mobile);
 }
 
 .tech-tag {
@@ -274,43 +267,35 @@ a:visited {
 }
 
 
-/* FEATURED PROJECTS */
 
-:root {
-    --featured-proj-width: 800px;
-}
+
+/*--   FEATURED PROJECTS    --*/
 
 .featured-projects {
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    align-items: flex-start;
+    margin: var(--side-margins-mobile);
 }
+
 
 .featured-projects h1 {
     color: var(--heading-blue);
-    max-width: var(--featured-proj-width);
-    font-size: 80px;
-    line-height: 108px;
-    font-weight: 700;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .project-container {
-    max-width: var(--featured-proj-width);
     background-color: white;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 50px auto;
 }
 
 .project-container-text {
     background-color: white;
-    margin: 20px 0 20px 40px;
+    margin-top: 20px;
 }
 
 .project-container-text p {
@@ -318,21 +303,15 @@ a:visited {
 }
 
 .square-project-image {
-    width: 250px;
-    height: 250px;
+    max-width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: 55%;
-}
-
-.square-project-image-weather {
-    min-width: 250px;
-    height: 250px;
-    object-fit: cover;
+    object-position: 50%;
 }
 
 
 .code-tags {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 15px 0;
 }
 
 .code-tags p {
@@ -345,12 +324,12 @@ a:visited {
 
 .project-links {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .project-links .button  {
     background-color: #F5F5F5;
-    font-family: SatoshiRegular;
+    font-family: 'SatoshiVariable';
     font-weight: 500;
     font-size: 20px;
     line-height: 27px;
@@ -382,41 +361,36 @@ a:visited {
 
 
 
-/* MY WORDS */
+/*--    MY WORDS   --*/
+
+
 
 .my-words {
     background-color: var(--tertiary-color);
     width: 100%;
-    grid-column: 1 / 3;
-    margin: auto;
-    /*display: none;   - For when I don't have anything to show here*/
+    grid-column: 1 / 2;
+}
+
+.my-words-container {
+    margin: var(--side-margins-mobile);
 }
 
 .my-words h1 {
     color: var(--heading-pink);
-    padding: 0;
-    width: 100%;
+    padding: 25px;
     margin: 50px auto auto auto;
+    text-align: center;
 }
 
 
 .article img {
     width: 100%;
-    max-width: 600px;
+    margin-bottom: 30px;
 }
 
-.my-words-container {
-    width: 80%;
-    max-width: 1300px;
-    margin: 0 auto 50px auto;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .article {
     grid-column: 1 / 2;
-    width: 40%;
-    max-width: 500px;
     padding: 25px;
     margin: 10px auto 10px auto;
 }
@@ -439,7 +413,7 @@ a:visited {
 .button-read-article {
     background-color: rgb(255, 255, 255);
     border: none;
-    width: 125px;
+    width: 130px;
     border-radius: 40px;
     display: flex;
     flex-direction: row;
@@ -463,31 +437,36 @@ a:visited {
 
 
 
-/* SKILLS */
+
+
+
+
+
+/*--    MY SKILLS   --*/
+
 
 .skills {
     background-color: var(--secondary-color);
-    grid-column: 1/3;
+    grid-column: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    min-height: 800px;
 }
 
 .skills h1 {
     color: var(--heading-blue);
-    font-size: 80px;
-    font-weight: 700;
     text-align: center;
-    margin: 25px auto;
+    margin: 60px auto 25px auto;
 }
 
 .skill-lists-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .skill-lists {
@@ -525,19 +504,21 @@ dd {
 }
 
 
-/* Time to talk */
+
+/*--    CONTACT    --*/
 
 .contact {
     min-height: 800px;
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: var(--side-margins-mobile);
 }
 
 .contact h1 {
-    font-size: 120px;
+    font-size: 68px;
     font-weight: 900;
     line-height: 162px;
     color: var(--heading-pink);
@@ -548,11 +529,12 @@ dd {
 .contact img {
     border-radius: 50%;
     max-width: 150px;
+    max-height: 150px;
 }
 
 .contact .presentation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 50px;
 }
 
@@ -574,8 +556,9 @@ dd {
     padding: 10px;
 }
 
-.contact .links button {
-    margin: 10px;
+.contact .links a {
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .btn-top {
@@ -587,234 +570,301 @@ dd {
 }
 
 
-.btn-top svg:hover {
-    color: blue;
-    cursor: pointer;
-}
 
 
+
+
+/* FOR TABLET */
 
 @media (min-width: 667px) and (max-width: 1024px) {
 
-    body{
-    grid-template-columns: 1fr 1fr;
+    .introduction-side-image {
+        background-image: url('./assets/images/photo-flower-unsplash.jfif');
+        background-size: cover;
+        background-position: 55%;
+        display: inline-block;
+        height: 350px;
+        width: 100%;
     }
 
     .introduction {
-        height: 665px;
-        grid-column: span 2;
+        min-height: 700px;
+        width: 100%;
+        position: relative;
     }
 
-    .container {
-        margin: 30px 25px;
+    .introduction .container {
+        margin: 50px var(--side-margins-tablet);
     }
 
-
-    .introduction-side-image {
-        /*display: none;    - On mobile view */  
-        height: 350px;
-        grid-column: span 2;
-        grid-row: 1;
+    .introduction .container p {
+        margin-left: 30px;
     }
 
-    .tech p {
-        max-width: 400px;
-        margin: 0 0 0 60px;
+    .introduction .container .links {
+        margin-left: 30px;
+    }
+
+    .presentation {
+        flex-direction: row;
     }
 
     .scroller {
+        background-color: var(--scroller-circle-color);
+        position: absolute;
+        width: 150px;
+        height: 150px;
         top: 89%;
         left: calc(50% - 75px);
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
     }
 
-    .project-container {
-        margin: 0 5px 20px 5px;
-        background-color: white;
+        
+    .scroller img {
+        background-color: transparent;
+        height: 40px;
+    }
+
+    .tech p {
+        margin: 0 120px;
+    }
+
+    .featured-projects {
+        margin: var(--side-margins-tablet);
+    }
+
+    .my-words-container {
+        margin: var(--side-margins-tablet);
+    }
+
+    .skills {
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 800px;
     }
     
-    .project-container-text {
-        margin: 10px 25px;
-        background-color: white;
+    
+    .skill-lists-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 0 70px 60px 70px;
+        max-width: 600px;
     }
 
+    .skill-lists {
+        text-align: left;
+    }
+
+    .contact {
+        margin: var(--side-margins-tablet);
+    }
+    
+    .contact h1 {
+        font-size: 120px;
+    }
+    
+    .contact img {
+        border-radius: 50%;
+        max-width: 164px;
+        max-height: 164px;
+    }
+    
+    .contact .presentation {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+
+    }
 
     .btn-top {
-        margin-top: 0;
-        margin-bottom: 200px;
-        border: none;
-        background-color: transparent;
+        margin-top: 80px;
+        margin-bottom: 50px;
     }
 
-    .btn-top:hover {
-        color: red;
-        fill: blue;
-    }
 }
 
 
 
-@media (max-width: 667px) {
 
-    /*
-    body{
-        grid-template-columns: 1fr;
-        }*/
 
-        
-.introduction-side-image {
-    display: none;
-}
-    h1 {
-        font-size: 72px;
-    }
+/* FOR DESKTOP*/
+
+    @media (min-width: 1025px) {
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
 
         .introduction {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    
+        .introduction .container {
+            margin: 200px var(--side-margins-desktop);
+        }
+    
+        .introduction .container p {
+            margin-left: 30px;
+        }
+    
+        .introduction .container .links {
+            margin-left: 30px;
+        }
+    
+        .presentation {
+            flex-direction: row;
+        }
+
+        .introduction-side-image {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            width: 100%;
             height: 100%;
-            min-height: 960px;  /*1248px blir snyggt för 320px bredd*/
-            grid-column: 1 / 3;
+            background-image: url('./assets/images/photo-flower-unsplash.jfif');
+            background-size: cover;
+            background-position: 75%;
+            display: inline;
         }
-
-        .presentation img {
-            margin-bottom: 20px;
-        }
-        
-        
-        .container .presentation {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            margin: 20px 20px;
-        }
-
 
         .tech {
             grid-column: 1 / 3;
-            flex-direction: column;
+            width: 100%;
+            flex-direction: row;
+
         }
 
         .tech p {
-            max-width: 300px;
-            margin: 20px 0 0 0;
+            width: 45%;
+            max-width: 800px;
         }
 
-        .skill-lists-container {
-            flex-direction: column;
+        .featured-projects {
+            grid-column: 1 / 3;
+            margin: auto;
         }
 
         .project-container {
-            flex-direction: column;
-            justify-content: flex-start;
-            margin: 10px auto 10px auto;
-            background-color: white;
+            flex-direction: row;
+            max-width: 900px;
+            gap: 30px;
         }
-
-        .project-container-text {
-            margin: 10px 15px;
-            background-color: white;
-        }
-
-        .square-project-image {
-            width: 100%;
-            max-width: 400px;
-            max-height: 400px;
-            object-fit: cover;
-            object-position: 55%;
-            margin: 0 10px;
-        }
-        
-        .square-project-image-weather {
-            width: 100%;
-            max-width: 400px;
-            max-height: 400px;
-            object-fit: cover;
-            margin: 0 10px;
-        }
-
-        .project-links {
-            flex-direction: column;
-            margin: 10px 0;
-        }
-
 
         .featured-projects h1 {
-            text-align: center;
-            font-size: 58px;
-            line-height: 78px;
-            margin-bottom: 20px;
+            margin-top: 70px;
+            text-align: left;
+        }
+        
+        .project-container .project-image {
+            height: 300px;
+            width: 350px;
+            object-fit: cover;
+            object-position: 50%;
         }
 
         .my-words {
             grid-column: 1 / 3;
         }
 
-        .article {
+        .my-words-container {
+            margin: 80px 10% 150px 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .my-words-container h1 {
             width: 100%;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .article {
+            max-width: 700px;
+            width: 45%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .article img {
+            max-width: 700px;
         }
 
         .skills {
             grid-column: 1 / 3;
-            height: 100%;
-            min-height: 1300px;
         }
 
         .skill-lists-container {
-            align-items: center;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
         }
 
-        
         .skill-lists {
-            text-align: center;
-            margin: auto;
+            text-align: left;
         }
 
         .contact {
             grid-column: 1 / 3;
-            padding: 20px;
-        }
-
-        .contact h1 {
-            text-align: center;
-            font-size: 58px;
-            line-height: 78px;
-        }
-
-        .my-words h1 {
-            text-align: center;
-            font-size: 58px;
-            line-height: 78px;
+            gap: 10px;
         }
 
         .contact .presentation {
-            flex-direction: column;
+            width: 60%;
+            justify-content: center;
         }
 
+        .contact h1 {
+            font-size: 120px;
+        }
+
+        .contact p {
+            margin: 0;
+        }
+        
         .contact img {
-            margin-bottom: 20px;
+            border-radius: 50%;
+            max-width: 164px;
+            max-height: 164px;
         }
-
+        
+        .contact .presentation {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+    
+        }
+    
         .btn-top {
-            margin-top: 0;
-            margin-bottom: 200px;
-            border: none;
-            background-color: transparent;
+            margin-top: 80px;
+            margin-bottom: 50px;
         }
         
-
-
         
+
 .scroller {
-    grid-column: 1 / 3;
     background-color: var(--scroller-circle-color);
-    position: fixed;
-    top: 78%;
-    left: calc(50% - 50px);
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    left: calc(50% - 75px);
+    top: 80%;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin: 50px auto 50px auto;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -824,12 +874,11 @@ dd {
 
 .scroller img {
     background-color: transparent;
-    height: 20px;
+    height: 50px;
 }
 
 .scroller p {
     color: var(--heading-blue);
-    font-size: 18px;
 }
 
 
