@@ -638,6 +638,10 @@ dd {
         margin: var(--side-margins-tablet);
     }
 
+    .project-image {
+        max-height: 500px;
+    }
+
     .my-words-container {
         margin: var(--side-margins-tablet);
     }
