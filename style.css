@@ -36,7 +36,7 @@
     --tag-blue: #2483E0;
     --tag-green: #6DB486;
 
-    --side-margins-mobile: 30px;
+    --side-margins-mobile: 20px;
     --side-margins-tablet: 50px;
     --side-margins-desktop: 65px;
 }
@@ -115,7 +115,7 @@ a:visited {
 
 
 .introduction {
-    min-height: 600px;
+    min-height: 100vh;
     width: 100%;
     position: relative;
 }
@@ -128,12 +128,12 @@ a:visited {
     border-radius: 50%;
     max-width: 164px;
     max-height: 164px;
+    margin: auto;
 }
 
 .presentation {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 
@@ -205,7 +205,7 @@ a:visited {
 .scroller {
     background-color: var(--scroller-circle-color);
     position: fixed;
-    top: 78%;
+    top: 80%;
     left: calc(50% - 50px);
     width: 100px;
     height: 100px;
@@ -596,8 +596,13 @@ dd {
 
     .introduction {
         min-height: 700px;
+        height: 100vh;
         width: 100%;
         position: relative;
+    }
+
+    .introduction img {
+        margin: 0;
     }
 
     .introduction .container {
@@ -619,9 +624,9 @@ dd {
     .scroller {
         background-color: var(--scroller-circle-color);
         position: absolute;
-        width: 150px;
-        height: 150px;
-        top: 89%;
+        width: 125px;
+        height: 125px;
+        top: 82%;
         left: calc(50% - 75px);
         padding: 0;
         display: flex;
@@ -721,11 +726,16 @@ dd {
         .introduction {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            min-height: 980px;
+            min-height: 800px;
+            height: 100vh;
         }
     
         .introduction .container {
             margin: 150px var(--side-margins-desktop);
+        }
+
+        .introduction img {
+            margin: 0;
         }
     
         .introduction .container p {
