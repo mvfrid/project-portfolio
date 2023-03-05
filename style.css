@@ -17,9 +17,9 @@
 /* Colors and common dimensions */
 
 :root {
-    --primary-color: rgb(207, 204, 236);
+    --primary-color: rgb(238, 224, 255);
     --secondary-color: rgb(250, 226, 243);
-    --tertiary-color: rgb(207, 245, 216);
+    --tertiary-color: rgb(207, 245, 229);
     --fourth-color: rgb(171, 196, 243);
     --standard-white-color: rgb(255, 255, 255);
 
@@ -217,6 +217,7 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: bounce 1s infinite alternate;
 }
 
 .scroller img {
@@ -229,6 +230,12 @@ a:visited {
     font-size: 18px;
 }
 
+
+
+@keyframes bounce {
+    0%   {transform: translateY(0);}
+    100% {transform: translateY(50px);}
+  }
 
 
 
@@ -639,6 +646,7 @@ dd {
         justify-content: center;
         align-items: center;
         gap: 5px;
+        animation: none;
     }
 
         
@@ -657,6 +665,10 @@ dd {
 
     .project-image {
         max-height: 500px;
+    }
+
+    .project-container-text {
+        margin-top: 0;
     }
 
     .my-words-container {
@@ -789,6 +801,10 @@ dd {
             gap: 30px;
         }
 
+        .project-container-text {
+            margin-top: 0;
+        }
+
         .featured-projects h1 {
             margin-top: 70px;
             text-align: left;
@@ -896,6 +912,7 @@ dd {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: none;
 }
 
 .scroller img {
