@@ -217,7 +217,7 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: bounce 2s infinite alternate;
+    animation: bounce 1s infinite alternate;
 }
 
 .scroller img {
