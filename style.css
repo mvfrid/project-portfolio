@@ -706,6 +706,8 @@ dd {
     
     .contact h1 {
         font-size: 90px;
+        line-height: normal;
+        margin-bottom: 50px;
     }
     
     .contact img {
@@ -873,6 +875,8 @@ dd {
 
         .contact h1 {
             font-size: 120px;
+            line-height: normal;
+            margin-bottom: 50px;
         }
 
         .contact p {
