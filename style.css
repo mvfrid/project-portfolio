@@ -402,7 +402,7 @@ a:visited {
 
 
 .my-words {
-    /*display: none;  Until I have something to write here */
+    display: none; /* Until I have something to write here */
     background-color: var(--tertiary-color);
     width: 100%;
     grid-column: 1 / 2;
@@ -693,7 +693,7 @@ dd {
 
     
     .my-words {
-        /*display: none;  Until I have something to write here */
+        display: none;  /* Until I have something to write here */
     }
 
     .my-words-container {
@@ -845,7 +845,7 @@ dd {
         }
 
         .my-words {
-            /*display: none;  Until I have something to write here */
+            display: none;  /* Until I have something to write here */
             grid-column: 1 / 3;
         }
 
