@@ -402,7 +402,6 @@ a:visited {
 
 
 .my-words {
-    display: none; /* Until I have something to write here */
     background-color: var(--tertiary-color);
     width: 100%;
     grid-column: 1 / 2;
@@ -446,7 +445,19 @@ a:visited {
     font-size: 32px;
     font-weight: 900;
     line-height: 43px;
+    margin: 0 0 5px 0;
+}
+
+.article h4 {
+    color: grey;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 43px;
     margin: 0 0 20px 0;
+}
+
+.article p {
+    margin: 0 0 5px 0;
 }
 
 .button-read-article {
@@ -691,11 +702,6 @@ dd {
         margin-top: 0;
     }
 
-    
-    .my-words {
-        display: none;  /* Until I have something to write here */
-    }
-
     .my-words-container {
         margin: var(--side-margins-tablet);
     }
@@ -845,7 +851,6 @@ dd {
         }
 
         .my-words {
-            display: none;  /* Until I have something to write here */
             grid-column: 1 / 3;
         }
 
