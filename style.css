@@ -120,7 +120,7 @@ a:visited {
 
 
 
-
+/* MOBILE STYLING */
 
 /*--  PRESENTATION INTRODUCTION  --*/
 
@@ -858,13 +858,15 @@ dd {
             margin: 80px 10% 150px 10%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            /*justify-content: space-between; When we have more than 1 article*/
+            justify-content: center; /*Remove later*/
             gap: 50px;
         }
 
         .my-words-container h1 {
             width: 100%;
-            text-align: left;
+            /* text-align: left; When we have more than 1 article*/
+            text-align: center; /*Remove later*/
             margin: 0;
             padding: 0;
         }
