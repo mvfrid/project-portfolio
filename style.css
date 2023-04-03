@@ -102,6 +102,12 @@ a:visited {
     color: black;
 }
 
+.note {
+    font-family: 'EB Garamond', serif;
+    font-size: 14px;
+    margin: 0;
+}
+
 
 
 
