@@ -290,7 +290,8 @@ a:visited {
 
 
 .js {
-    background-color: var(--heading-pink);
+    /*background-color: var(--heading-pink);*/
+    background-color: #925b6b;
 }
 
 .react {
@@ -301,7 +302,7 @@ a:visited {
     background-color: var(--tag-darkgreen);
 }
 
-.mob {
+.pair {
     background-color: var(--tag-blue);
 }
 
